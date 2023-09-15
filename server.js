@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const PORT = 3001;
 // import cors
-const cors = require("cors")
-app.use(cors())
+const cors = require("cors");
+app.use(cors());
+// add front end to the server
+app.use(express.static("dist"));
 // import morgan middleware
 // https://github.com/expressjs/morgan
 const morgan = require("morgan");
